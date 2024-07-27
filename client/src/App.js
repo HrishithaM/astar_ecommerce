@@ -40,7 +40,6 @@ function App() {
           );
         })}
       </div> 
-
       <div>
         <input
           type="text"
