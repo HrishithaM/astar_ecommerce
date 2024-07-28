@@ -1,8 +1,21 @@
 import './App.css';
+import './index.css';
 import { useEffect, useState } from "react";
 import Axios from "axios"; 
 
-function App() {
+import React from 'react'
+import NavBar from './components/Navbar/NavBar';
+
+export const App = () => {
+  return (
+    <div className='container'>
+      <NavBar/>
+    </div>
+  )
+}
+
+export default App;
+/*function App() {
   const [ListOfUsers, setListOfUsers] = useState([]);
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
@@ -39,8 +52,7 @@ function App() {
           </div>
           );
         })}
-      </div> 
-      <div>
+ 
         <input
           type="text"
           placeholder="Name..."
@@ -66,7 +78,7 @@ function App() {
       </div>
     </div>
   );
-}
+}*/
 
-export default App;
+
 
