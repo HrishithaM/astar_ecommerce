@@ -1,16 +1,50 @@
 import './App.css';
 import './index.css';
-import { useEffect, useState } from "react";
+import { Profiler, useEffect, useState } from "react";
 import Axios from "axios"; 
 
 import React from 'react'
 import NavBar from './components/Navbar/NavBar';
+import Apparel from './components/Apparel/Apparel';
+import About from './components/About/About';
+import Home from './components/Home/Home';
+import { Cart } from './components/Cart/Cart';
+import {UserProfile} from './components/UserProfile/UserProfile';
 
 export const App = () => {
+  let component
+  switch(window.location.pathname){
+    case "/":
+      component = <App/>
+      break
+    case "/Home":
+      component = <Home/>
+      break
+    case "/About":
+      component = <About/>
+      break
+    case "/Apparel":
+      component = <Apparel/>
+      break;
+    case "/Cart":
+      component = <Cart/>
+      break;
+    case "/UserProfile":
+      component = <UserProfile/>
+      break;
+  }
   return (
-    <div className='container'>
-      <NavBar/>
-    </div>
+    <>
+      <div className='container'>
+        <NavBar/>
+        {component}
+      </div>
+
+   
+      
+
+    </>
+  
   )
 }
 

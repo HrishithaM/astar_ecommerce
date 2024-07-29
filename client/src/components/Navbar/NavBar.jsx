@@ -8,20 +8,31 @@ import userIcon from '../../Assets/userIcon.png'
 export const NavBar = () => {
   return (
     <div className='navbar'>
-        <img src={astar_logo} alt="logo" className='logo'/>
+        <a href ="/Home">
+          <img src={astar_logo} alt="logo" className='logo'/>
+        </a>
         <ul>
-            <li>Home</li>
-            <li>Apparel</li>
-            <li>About</li>
+            <li> 
+              <a href="/Home">Home</a>
+            </li>
+            <li>
+              <a href='/Apparel'>Apparel</a>
+            </li>
+            <li>
+                <a href='/About'>About</a>
+            </li>
         </ul>
 
         <div className='search'>
             <input type="text" placeholder='Search' />
             <img src={searchIcon} alt="search_icon" />
         </div>
-
-        <img src={cartIcon} alt="cart_icon" className='cartImg' />
-        <img src={userIcon} alt="user_icon" className='userImg' />
+        <a href='/Cart'>
+          <img src={cartIcon} alt="cart_icon" className='cartImg' />
+        </a>
+        <a href='/UserProfile'>
+          <img src={userIcon} alt="user_icon" className='userImg' />
+        </a>
     </div>
   )
 }
