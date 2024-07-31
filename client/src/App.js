@@ -1,8 +1,55 @@
 import './App.css';
-import { useEffect, useState } from "react";
+import './index.css';
+import { Profiler, useEffect, useState } from "react";
 import Axios from "axios"; 
 
-function App() {
+import React from 'react'
+import NavBar from './components/Navbar/NavBar';
+import Apparel from './components/Apparel/Apparel';
+import About from './components/About/About';
+import Home from './components/Home/Home';
+import { Cart } from './components/Cart/Cart';
+import {UserProfile} from './components/UserProfile/UserProfile';
+
+export const App = () => {
+  let component
+  switch(window.location.pathname){
+    case "/":
+      component = <App/>
+      break
+    case "/Home":
+      component = <Home/>
+      break
+    case "/About":
+      component = <About/>
+      break
+    case "/Apparel":
+      component = <Apparel/>
+      break;
+    case "/Cart":
+      component = <Cart/>
+      break;
+    case "/UserProfile":
+      component = <UserProfile/>
+      break;
+  }
+  return (
+    <>
+      <div className='container'>
+        <NavBar/>
+        {component}
+      </div>
+
+   
+      
+
+    </>
+  
+  )
+}
+
+export default App;
+/*function App() {
   const [ListOfUsers, setListOfUsers] = useState([]);
   const [name, setName] = useState("");
   const [age, setAge] = useState(0);
@@ -26,7 +73,7 @@ function App() {
         username}])
     });
   };
-
+///making a pull request !!
   return (
     <div className="App"> 
       <div className = "userDisplay">
@@ -39,9 +86,7 @@ function App() {
           </div>
           );
         })}
-      </div> 
-
-      <div>
+ 
         <input
           type="text"
           placeholder="Name..."
@@ -67,7 +112,7 @@ function App() {
       </div>
     </div>
   );
-}
+}*/
+
  // Testing Hrishitha's Branch
-export default App;
 
