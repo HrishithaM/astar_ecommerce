@@ -1,13 +1,13 @@
 import React from 'react';
 import './Item.css';
-import styles from './italicText.css';
+
 
 function Item2() {
     return (
         <div className="item item2">
             <h2>Founding Team:</h2>
             <div className="paras">
-                <p className={styles.italicText}>
+                <p>
                     <strong>Vikranth</strong><i> is a Computer Science student at the University of Wisconsin - Madison, and is currently an intern at PACCAR. He developed a passion for Computer Science his junior year of high school, and wants to share his passion with others. Vikranth values an environment that teaches on-the-job skills, provides resources for career development, encourages problem solving and critical thinking in a group setting, and mentorship as he believes these     are the pieces for helping students grow.</i> 
                 </p>
                 <p>
