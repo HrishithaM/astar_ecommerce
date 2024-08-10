@@ -1,41 +1,45 @@
-import React from 'react'
-import './NavBar.css'
-import astar_logo from '../../Assets/astar_logo.jpg'
-import searchIcon from '../../Assets/search-b.png'
-import cartIcon from '../../Assets/cart.png'
-import userIcon from '../../Assets/userIcon.png'
+import React from 'react';
+import './NavBar.css';
+import astar_logo from '../../Assets/astar_logo.jpg';
+import searchIcon from '../../Assets/search-b.png';
+import cartIcon from '../../Assets/cart.png';
+import userIcon from '../../Assets/userIcon.png';
 
-export const NavBar = () => {
+const NavBar = () => {
+  const navigateTo = (path) => {
+    window.history.pushState({}, "", path);
+    window.dispatchEvent(new Event("popstate"));
+  };
+
   return (
     <div className='navbar'>
-        <a href ="/Home">
-          <img src={astar_logo} alt="logo" className='logo'/>
-        </a>
-        <ul>
-            <li> 
-              <a href="/Home">Home</a>
-            </li>
-            <li>
-              <a href='/Apparel'>Apparel</a>
-            </li>
-            <li>
-                <a href='/About'>About</a>
-            </li>
-        </ul>
+      <div onClick={() => navigateTo('/Home')} className='logo'>
+        <img src={astar_logo} alt="logo" />
+      </div>
+      <ul>
+        <li>
+          <div onClick={() => navigateTo('/Home')}>Home</div>
+        </li>
+        <li>
+          <div onClick={() => navigateTo('/Products')}>Products</div>
+        </li>
+        <li>
+          <div onClick={() => navigateTo('/About')}>About</div>
+        </li>
+      </ul>
 
-        <div className='search'>
-            <input type="text" placeholder='Search' />
-            <img src={searchIcon} alt="search_icon" />
-        </div>
-        <a href='/Cart'>
-          <img src={cartIcon} alt="cart_icon" className='cartImg' />
-        </a>
-        <a href='/UserProfile'>
-          <img src={userIcon} alt="user_icon" className='userImg' />
-        </a>
+      <div className='search'>
+        <input type="text" placeholder='Search' />
+        <img src={searchIcon} alt="search_icon" />
+      </div>
+      <div onClick={() => navigateTo('/Cart')}>
+        <img src={cartIcon} alt="cart_icon" className='cartImg' />
+      </div>
+      <div onClick={() => navigateTo('/UserProfile')}>
+        <img src={userIcon} alt="user_icon" className='userImg' />
+      </div>
     </div>
-  )
+  );
 }
 
-
-export default NavBar
+export default NavBar;
