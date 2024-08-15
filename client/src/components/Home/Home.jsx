@@ -3,6 +3,7 @@ import "../Home/Home.css"
 import girl1 from "../../Assets/girl.png"
 import girl2 from "../../Assets/girl2.png"
 import guy3 from "../../Assets/guy3.png"
+import Footer from '../../components/Footer'
 
 
 export const Home = () => {
@@ -40,7 +41,7 @@ export const Home = () => {
           </div>
         </div>
   
-   
+        <Footer />
         
       </div>
   

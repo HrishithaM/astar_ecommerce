@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
 import '../Products/Products.css'; // Importing the CSS file for products
+import Footer from '../../components/Footer';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -39,9 +40,10 @@ const Products = () => {
           </div>
         ))
       )}
+      
     </div>
-  );
-};
+    
+)}
 
 export default Products;
 

@@ -1,7 +1,13 @@
 import React from 'react'
+import Footer from '../../components/Footer'
 
 export const UserProfile = () => {
   return (
-    <div>UserProfile</div>
+    <div>
+      UserProfile
+
+      <Footer />
+      </div>
+
   )
 };
