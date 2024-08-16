@@ -12,6 +12,7 @@ const NavBar = () => {
   };
 
   return (
+
     <div className='navbar'>
       <div onClick={() => navigateTo('/Home')} className='logo'>
         <img src={astar_logo} alt="logo" />

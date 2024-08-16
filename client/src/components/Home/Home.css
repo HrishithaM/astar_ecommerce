@@ -57,7 +57,7 @@
     padding: 20px; /* Optional: add some space around the image */
     background-image: linear-gradient(#d19dcb, white); /* Background color for the box */
     border-radius: 60px; /* Round the corners of the box */
-    width: 300px;
+    width: 250px;
     height: 600px;
 } 
  
@@ -80,9 +80,10 @@
 }
 
 .slider img{
-    width: 100%;
-    max-width: 557px;
-    max-height: 855px;
+    width: 200%;
+    height: 150%;
+    max-width: 2500px;
+    max-height: 2700px;
     border-radius: 20px;
    
     scroll-snap-align: start;
