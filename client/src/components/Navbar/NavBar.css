@@ -1,4 +1,4 @@
-.navbar{
+/* .navbar{
     width: 100%;
     display: flex;
     align-items: center;
@@ -69,4 +69,94 @@ ul li{
     width: 20px;
     cursor: pointer;
 }
+ */
 
+
+ .navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding: 15px 5%;
+    box-sizing: border-box; /* Ensures padding is included in width */
+    max-width: 1700px; /* Prevents stretching on large screens */
+    margin: 0 auto; /* Centers the navbar */
+}
+
+.cartImg,
+.userImg,
+.logo {
+    width: 3rem; /* Responsive size */
+    height: auto;
+    cursor: pointer;
+}
+
+ul {
+    flex: 1;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 0 2rem; /* Responsive spacing */
+    font-size: 1.2rem; /* Adjusted font size */
+    color: #004145;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    border: 2px solid #004145;
+}
+
+.search input {
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #004145;
+    font-size: 1rem;
+    max-width: 200px;
+}
+
+.search img {
+    width: 1.5rem; /* Responsive icon size */
+    cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+    }
+
+    ul li {
+        margin: 10px 0;
+    }
+
+    .search {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .cartImg,
+    .userImg,
+    .logo {
+        width: 2.5rem; /* Smaller icons for smaller screens */
+    }
+}

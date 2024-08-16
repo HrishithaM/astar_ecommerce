@@ -4,6 +4,9 @@ import girl1 from "../../Assets/girl.png"
 import girl2 from "../../Assets/girl2.png"
 import guy3 from "../../Assets/guy3.png"
 import Footer from '../../components/Footer'
+import shirt1 from "../../Assets/shirt1.png"
+import shirt2 from "../../Assets/shirt2.png"
+import shirt3 from "../../Assets/shirt3.png"
 
 
 export const Home = () => {
@@ -15,11 +18,8 @@ export const Home = () => {
                 Shop A* Merch Today! 
           </h1>
           <p>
-              Lorem ipsum odor amet, consectetuer adipiscing elit. Aptent adipiscing natoque; nascetur dolor elit diam pulvinar. 
-              Euismod mollis lacus at sollicitudin mus ullamcorper. Molestie inceptos sollicitudin id natoque conubia. Urna cursus egestas justo maecenas cras in sociosqu a. 
-
-          </p>
-          <a href='/Apparel'>
+          Celebrate your A-Star journey with our exclusive 2024 collection! Represent the program that equips you with industry-level computer science skills in style. Explore our apparel and wear your achievements proudly!</p>
+          <a href='/Products'>
             <button className='shopNowBtn'>Shop Now</button>
           </a>
         </div>
@@ -28,9 +28,9 @@ export const Home = () => {
 
         <div className='imageSlides'>
           <div className='slider'>
-            <img src={girl1} alt="girl1" id='slide1'/>
-            <img src={girl2} alt="girl2" id='slide2'/>
-            <img src={guy3} alt="guy3" id='slide3'/>
+            <img src={shirt1} alt="shirt1" id='slide1'/>
+            <img src={shirt3} alt="shirt2" id='slide2'/>
+            <img src={shirt2} alt="shirt3" id='slide3'/>
 
           </div>
           <div className='SliderNav'>
