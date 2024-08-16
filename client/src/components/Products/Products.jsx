@@ -4,7 +4,8 @@ import '../Products/Products.css'; // Importing the CSS file for products
 import Footer from '../../components/Footer';
 
 const Products = () => {
-  const [products, setProducts] = useState([]);
+  
+  const [products, setProducts] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -22,6 +23,12 @@ const Products = () => {
         setLoading(false);
       });
   }, []);
+  
+  const handleProductClick = (products) => {
+    window.history.pushState(null, '', `/products/${products._id}`);
+    window.dispatchEvent(new PopStateEvent('popstate'));
+  };
+  
 
   return (
     <div className="productsInfo">
@@ -31,7 +38,7 @@ const Products = () => {
         <p>{error}</p>
       ) : (
         products.map(product => (
-          <div className="productCard" key={product.id}>
+          <div className="productCard" key={product._id} onClick={() => handleProductClick(product)}>
             <h2>{product.name}</h2>
             <img src={product.image_url} alt={product.name} />
             <p>${product.price}</p>

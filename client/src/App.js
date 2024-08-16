@@ -4,6 +4,7 @@ import Axios from "axios";
 import React, { useState, useEffect } from 'react';
 import NavBar from './components/Navbar/NavBar';
 import Products from './components/Products/Products';
+import ProductDetails from './components/ProductDetails';
 import About from './components/About/About';
 import Home from './components/Home/Home';
 import { Cart } from './components/Cart/Cart';
@@ -20,21 +21,24 @@ export const App = () => {
   }, []);
 
   let component;
-  switch (path) {
-    case "/":
-    case "/Home":
+  switch (true) {
+    case path === "/":
+    case path === "/Home":
       component = <Home />;
       break;
-    case "/About":
+    case path === "/About":
       component = <About />;
       break;
-    case "/Products":
+    case path === "/Products":
       component = <Products />;
       break;
-    case "/Cart":
+    case path.startsWith("/products/"):
+      component = <ProductDetails />;
+      break;
+    case path === "/Cart":
       component = <Cart />;
       break;
-    case "/UserProfile":
+    case path === "/UserProfile":
       component = <UserProfile />;
       break;
     default:

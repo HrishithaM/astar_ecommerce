@@ -15,12 +15,14 @@
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  max-width: calc(33.333% - 40px); /* Ensure max-width to prevent overflow */
 }
 
 .productCard img {
-  width: 70%;
+  width: 100%;
   height: 400px; /* Fixed height for all images */
-  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+  object-fit: contain; /* Ensures the image covers the container while maintaining aspect ratio */
+  object-position: center;
   border-radius: 10px;
 }
 
